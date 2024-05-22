@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+body{font-family: inter;}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.box {
+  margin-top: 55%;
+  text-align: center;
+}
+
+.box1{
+  margin-bottom: 20vh;
+}
+
+#logButton {
+  background: #040463;
+  height: 7vh;
+  width: 96vw;
+  margin-bottom: 5%;
+  border-radius: 2vw;
+  box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.5);
+  transition: transform 0.8s;
+}
+
+#logButton > a {
+  color: #ffffff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+#regButton {
+  background: #efeef6;
+  height: 7vh;
+  width: 96vw;
+  margin-bottom: 5%;
+  border-radius: 2vw;
+  box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.5);
+  transition: transform 0.8s;
+}
+
+#regButton > a {
+  color: #040463;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+#regButton:active, #logButton:active {
+  transform: scale(0.95);
+}
+
+#Guess{
+  margin-top: 8%;
+  color: #040463;
+}

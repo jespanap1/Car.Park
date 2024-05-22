@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+body {
+  font-family: Inter;
+}
+
+header {
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.loginHeader {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-solid {
+  font-size: 2.5vh;
+}
+
+img {
+  width: 15vw;
+  height: 15vh;
+}
+
+h1 {
+  color: #040463;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  padding: 5px 0;
+  color: 313131;
+}
+
+label {
+  color: #8391a1;
+  margin-bottom: 0.25vh;
+}
+
+#label2 {
+  margin-top: 3vw;
+}
+
+input {
+  color: #313131;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.propiedades {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 0;
+  background: none;
+  color: inherit;
+  border: none;
+}
+
+#logButton {
+  background: #040463;
+  height: 6vh;
+  width: 96vw;
+  margin-bottom: 5%;
+  border-radius: 2vw;
+}
+
+footer span {
+  color: #040463;
+  font-weight: 900;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/34a219943a.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrate</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/login"><i class="fa-solid fa-angle-left"></i></a>
+    </header>
+
+    <h1>Hello! Register to get started</h1>
+
+    <main>
+      <form method="post" action="/register">
+        <div>
+          <label for="nombre">Name</label>
+          <input type="text" name="nombre" required />
+        </div>
+
+        <div>
+          <label for="apellido">Surname</label>
+          <input type="text" name="apellido" required/>
+        </div>
+
+        <div>
+          <label for="email">Enter your email</label>
+          <input type="email" name="email" required/>
+        </div>
+
+        <div>
+          <label for="password">Enter your password</label>
+          <input type="password" name="password" required/>
+        </div>
+
+        <div><button type="submit">Register</button></div>
+      </form>
+    </main>
+
+    <footer>
+      <div>Already have an account?<a href="login"><span>Login Now</span></a></div>
+    </footer>
+  </body>
+</html>

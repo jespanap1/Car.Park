@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body>
+    <% if (userData.nombre) { %>
+    <form action="/login/sign-out" method="get">
+      <input type="submit" value="Cerrar sesión" />
+    </form>
+    <nav>
+      <h1><%= userData.nombre %> <%= userData.apellido %></h1>
+      <h1><%= userData.email %></h1>
+    </nav>
+    <% } else { %>
+    <div class="box">
+      <div class="box1">
+        <div id="circle">
+          <div id="circle2">
+            <div class="logo"><img src="images/Logo.svg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div id="logButton">
+          <a href="login">Iniciar sesión</a>
+        </div>
+        <div id="regButton">
+          <a href="register">Registrarse</a>
+        </div>
+        <div id="Guess">
+          <a>Continuar como invitado</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </body>
+</html>

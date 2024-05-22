@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estado de las plazas</title>
+    <link rel="stylesheet" type="text/css" href="css/park.css"> <!-- Ruta a tu archivo CSS -->
+</head>
+<body>
+    <h1>Estado de las plazas</h1>
+    <ul>
+        <% for (let plaza of plazas) { %>
+            <li>
+                <% if (plaza.status) { %>
+                    <img src="images/Car.svg" alt="Icono de coche">
+                <% } %>
+                Plaza <%= plaza.id %> - Estado: <%= plaza.status ? 'Ocupada' : 'Libre' %>
+            </li>
+        <% } %>
+    </ul>
+    <div id="recomendaciones">
+        <p>Plazas Desocupadas Recomendadas:</p>
+        <ul>
+            <% for (let plaza of plazas) { %>
+                <% if (!plaza.status) { %>
+                    <li>Plaza <%= plaza.id %></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>
