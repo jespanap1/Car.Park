@@ -5,4 +5,6 @@ const parkController = require('../controllers/parkController');
 
 router.get('/', parkController.getPark);
 
+router.post('/', parkController.receiveDistanceFromArduino);
+
 module.exports = router;
