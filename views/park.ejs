@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Park</title>
+    <title>Estado de las plazas</title>
+    <link rel="stylesheet" type="text/css" href="css/park.css"> <!-- Ruta a tu archivo CSS -->
 </head>
 <body>
-    <h1>Estado del Parqueadero</h1>
-    <% if (typeof distanceFromArduino !== 'undefined') { %>
-        <p>Distancia del Arduino: <%= distanceFromArduino %> cm</p>
-    <% } else { %>
-        <p>Distancia del Arduino no disponible</p>
-    <% } %>
+    <h1>Estado de las plazas</h1>
+    <ul>
+        <% for (let plaza of plazas) { %>
+            <li>
+                <% if (plaza.status) { %>
+                    <img src="images/Car.svg" alt="Icono de coche">
+                <% } else { %>
+                    Plaza <%= plaza.id %> - Estado: <%= plaza.status ? 'Ocupada' : 'Libre' %>
+                <% } %>
+            </li>
+        <% } %>
+    </ul>
+    <div id="recomendaciones">
+        <p>Plazas Desocupadas Recomendadas:</p>
+        <ul>
+            <% for (let plaza of plazas) { %>
+                <% if (!plaza.status) { %>
+                    <li>Plaza <%= plaza.id %></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
 </body>
 </html>
