@@ -7,15 +7,10 @@ const model = {
 
   modifyPlazaStates: function () {
     setInterval(() => {
-      console.log('Iniciando la modificación de estados...'); // Mensaje de depuración
       fs.readFile(this.route, 'utf8', (err, data) => {
         if (err) {
-          console.error('Error al leer el archivo JSON:', err);
           return;
         }
-  
-        console.log('Archivo JSON leído correctamente.'); // Mensaje de depuración
-  
         try {
           const plazas = JSON.parse(data);
   
@@ -26,10 +21,8 @@ const model = {
           plazas.forEach((plaza) => {
             const plazaTime = moment(plaza.lastModified);
             const secondsDiff = currentTime.diff(plazaTime, 'seconds');
-  
-            console.log(`secondsDiff: ${secondsDiff}`);
+
             if (secondsDiff >= 30) {
-              console.log(`Plaza modificada: ${plaza.id}`);
               // Modificando el status de las plazas de manera aleatoria
               plaza.status = Math.random() >= 0.5;
               // Ajustar la fecha para reflejar el pasado
@@ -43,8 +36,6 @@ const model = {
               console.error('Error al escribir el archivo JSON:', err);
               return;
             }
-  
-            console.log('Archivo JSON actualizado con éxito.'); // Mensaje de depuración
           });
         } catch (error) {
           console.error('Error al analizar el archivo JSON:', error);
