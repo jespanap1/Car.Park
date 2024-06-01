@@ -38,7 +38,7 @@ const controller = {
 
       // Redirigir o responder al cliente según tus necesidades
       // Puedes redirigir al usuario a una página de éxito o enviar una respuesta de éxito
-      res.send("Usuario registrado exitosamente");
+      res.redirect("login");
     },
   ],
 };

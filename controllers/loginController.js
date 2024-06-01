@@ -30,7 +30,7 @@ const controller = {
 
       req.session.user = searchedUser;
 
-      res.redirect('/');
+      res.redirect('/park');
     } else {
       return res.redirect('login?error=El mail o la contraseña son incorrectos');
     }
@@ -46,3 +46,4 @@ const controller = {
 };
 
 module.exports = controller;
+
